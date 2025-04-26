@@ -1,0 +1,35 @@
+export enum TipoDocumentoOrigen {
+    PorDecomiso = "PorDecomiso",
+    Compra = "Compra",
+    Excavacion = "Excavacion",
+    Legado = "Legado",
+    Donacion = "Donacion",
+    OrdenacionYReordenacion = "OrdenacionYReordenacion",
+    Permuta = "Permuta",
+    Premios = "Premios",
+    Usucapion = "Usucapion",
+    AltaPorReintegracion = "AltaPorReintegracion",
+    CambioDeAdscripcion = "CambioDeAdscripcion",
+    Ofrenda = "Ofrenda",
+    ProduccionPropia = "ProduccionPropia",
+    Recoleccion = "Recoleccion",
+    DepositoDeTitularidadPublica = "DepositoDeTitularidadPublica",
+    DepositoDeTerceros = "DepositoDeTerceros",
+    Estudio = "Estudio",
+    Exposicion = "Exposicion",
+    Conservacion = "Conservacion",
+    DepositoJudicial = "DepositoJudicial",
+    DepositoPrevioAAdquisicion = "DepositoPrevioAAdquisicion",
+  }
+  
+  export enum TipoInstitucion {
+    UMRPSFXCH = "UMRPSFXCH",
+    IglesiaDeChuquisaca = "IglesiaDeChuquisaca",
+    InstitucionPublica = "InstitucionPublica",
+    InstitucionPrivada = "InstitucionPrivada",
+    ColeccionPublica = "ColeccionPublica",
+    ColeccionPrivada = "ColeccionPrivada",
+    PersonaJuridica = "PersonaJuridica",
+    PersonaNatural = "PersonaNatural",
+  }
+  
