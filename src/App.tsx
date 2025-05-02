@@ -4,6 +4,8 @@ import { EditPage } from "./pages/EditPage";
 import { CreatePage } from "./pages/CreatePage";
 import { TenantListPage } from "./pages/TenantListPage";
 import { CreateTenantPage } from "./pages/CreateTenantPage";
+import { CreateIdentificationPage } from "./pages/CreateIdentificationPage";
+import { EditIdentificationPage } from "./pages/EditIdentificationPage";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/list" element={<ListPage />} />
         <Route path="/createAdministrativeFile" element={<CreatePage />} />
         <Route path="/editAdministrativeFile/:expediente" element={<EditPage />} />
+        <Route path="/createIdentification" element={<CreateIdentificationPage />} />
+        <Route path="/editIdentification/:expediente" element={<EditIdentificationPage />} />
       </Routes>
     </BrowserRouter>
   );

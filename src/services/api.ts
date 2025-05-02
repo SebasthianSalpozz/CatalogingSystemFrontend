@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // src/services/api.ts
 import axios from "axios";
 
@@ -47,4 +48,33 @@ export const getAdministrativeFiles = async () => {
   return response.data;
 };
 
+// Obtener todas las identificaciones
+export const getIdentifications = async () => {
+  const response = await api.get("/Identification");
+  return response.data; // Array de IdentificationDto
+};
+
+// Obtener una identificación por expediente
+export const getIdentification = async (expediente: number) => {
+  const response = await api.get(`/Identification/${expediente}`);
+  return response.data; // IdentificationDto
+};
+
+// Crear una nueva identificación
+export const createIdentification = async (identificationData: any) => {
+  const response = await api.post("/Identification", identificationData);
+  return response.data;
+};
+
+// Actualizar una identificación
+export const updateIdentification = async (expediente: number, identificationData: any) => {
+  const response = await api.put(`/Identification/${expediente}`, identificationData);
+  return response.data;
+};
+
+// Eliminar una identificación
+export const deleteIdentification = async (expediente: number) => {
+  const response = await api.delete(`/Identification/${expediente}`);
+  return response.status;
+};
 export { api };
