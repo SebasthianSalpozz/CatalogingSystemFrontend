@@ -97,7 +97,8 @@ export function CreatePage() {
 
     try {
       await api.post("ArchivoAdministrativo", formattedData);
-      navigate("/list");
+      const nuevoExpediente = formattedData.Expediente;
+      navigate("/createIdentification", { state: { expediente: nuevoExpediente } });
     } catch (error) {
       if (axios.isAxiosError(error) && error.response?.data?.message) {
         setErrors((prev) => ({ ...prev, general: error.response?.data?.message || "No se pudo guardar el archivo administrativo." }));
